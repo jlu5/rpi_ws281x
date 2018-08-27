@@ -1,9 +1,12 @@
 # Adafruit NeoPixel library port to the rpi_ws281x library.
 # Author: Tony DiCola (tony@tonydicola.com), Jeremy Garff (jer@jers.net)
 import atexit
+import sys
 
 import _rpi_ws281x as ws
 
+if sys.version_info[0] >= 3:  # Python 3 compat
+	xrange = range
 
 def Color(red, green, blue, white = 0):
 	"""Convert the provided red, green, blue color to a 24-bit color value.
