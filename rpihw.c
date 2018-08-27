@@ -339,7 +339,6 @@ const rpi_hw_t *rpi_hw_detect(void)
     #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
         rev = bswap_32(rev);  // linux,revision appears to be in big endian
     #endif
-    printf("rev: %#010x\n", rev);
 
     for (unsigned i = 0; i < (sizeof(rpi_hw_info) / sizeof(rpi_hw_info[0])); i++)
     {
