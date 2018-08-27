@@ -24,6 +24,9 @@ class _LED_Data(object):
 		self.size = size
 		self.channel = channel
 
+	def __len__(self):
+		return self.size
+
 	def __getitem__(self, pos):
 		"""Return the 24-bit RGB color value at the provided position or slice
 		of positions.
